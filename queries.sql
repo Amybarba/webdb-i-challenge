@@ -6,7 +6,7 @@ SELECT * FROM Customers WHERE PostalCode=1010;
 
 -- Find the *phone* number for the *supplier* with the *id 11*
 
-SELECT Phone FROM Suppliers where SupplierID=11;
+SELECT Phone FROM Suppliers WHERE SupplierID=11;
 
 -- List *first 10 **orders** placed, sorted **descending** by the **order date
 
@@ -14,7 +14,7 @@ SELECT * FROM Orders ORDER BY OrderDate DESC LIMIT 10
 
 -- Find all customers that live in London, Madrid, or Brazil
 
-SELECT * FROM Customers where City='London' OR City='Madrid' OR City='Brazil'
+SELECT  * FROM Customers WHERE City='London' OR City='Madrid' OR City='Brazil'
 
 -- Add a customer record for "The Shire", the contact 
 -- name is "Bilbo Baggins" the address is -"1 Hobbit-Hole" in "Bag End", 
