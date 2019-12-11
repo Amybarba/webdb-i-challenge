@@ -54,7 +54,10 @@ router.put('/:id', (req, res) => {
     .update(req.body)
     .then(count => {
         if (count) {
+            res.status(200).json({ message: `${count} record(s) updated`});
             res.status(404).json({ message: 'Account not located' });
+        } else {
+            res.status(404).json({ message: 'Could not update the account' });
         }
     })
     .catch(() => {
@@ -75,7 +78,7 @@ router.delete('/:id', (req, res) => {
 });
 
 function accountIsValid({ name, budget }) {
-    return name && typeof budget === 'number' && budget >= 0l
+    return name && typeof budget === 'number' && budget >= 0;
 }
 
 module.exports = router;
